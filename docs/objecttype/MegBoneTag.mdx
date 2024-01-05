@@ -1,0 +1,132 @@
+# MegBoneTag
+
+<ObjectType
+    name="MegBoneTag"
+    prefix="megbonetag@"
+    identityFormat={
+        <>
+            Identified using the format <code>{"megbonetag@<entity>,<model_blueprint>,<bone_id>"}</code>.
+        </>
+    }
+    description={
+        <>
+            Represents a bone on a model.
+        </>
+    }
+/>
+
+## Tags
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.children`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag(MegBoneTag)</code>}
+        Description={
+            <>
+                Returns a map of all the children of the bone, with the bone id as the key and the bone as the value.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.damage_tint`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagdamage_tint">
+                <code>damage_tint</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the damage tint of the bone.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.default_tint`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Description={
+            <>
+                Returns the default tint of the bone.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.id`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag</code>}
+        Description={
+            <>
+                Returns the id of the bone.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.item`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ItemTag</code>}
+        Description={
+            <>
+                Returns the underlying item that the bone uses.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.location`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>LocationTag</code>}
+        Description={
+            <>
+                Returns the location of the bone.
+            </>
+        }
+    />
+</MetaEntry>
+
+## Mechanisms
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.damage_tint`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the damage tint of the bone.
+            </>
+        }
+        Tags={
+            <a href="#tag-megbonetagdamage_tint">
+                <code>MegBoneTag.damage_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
