@@ -47,6 +47,16 @@ If `remove` is specified, the command will remove a state from the entity.
 ## Examples
 
 ```yml
-# Play the "wave" state on the entity the player's looking at.
-- megstate model:<player.target> state:wave
+# Play the "wave" state on the entity the player's looking at, with a 0.5 second lerp in and out.
+- megstate model:<player.target> state:wave lerp_in:0.5s lerp_out:0.5s
+```
+
+```yml
+# Removes the "wave" state from the entity the player's looking at.
+- megstate model:<player.target> state:wave remove
+```
+
+```yml
+# Removes all states from the entity the player's looking at.
+- megstate model:<player.target> remove
 ```
