@@ -56,4 +56,15 @@ td {
   padding: 0 16px 0 0;
 }
 
-@font-face { font-family: CA GingerMint; src: url('/font/CA GingerMint.otf'); }
+@font-face {
+  font-family: 'CA Gingermint';
+  src: url('/font/ca_gingermint.eot');
+  src: url('/font/ca_gingermint.eot?#iefix') format('embedded-opentype'),
+       url('/font/ca_gingermint.woff2') format('woff2'),
+       url('/font/ca_gingermint.woff') format('woff'),
+       url('/font/ca_gingermint.ttf') format('truetype'),
+       url('/font/ca_gingermint.svg#ca_gingermintregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
