@@ -1,0 +1,153 @@
+---
+sidebar_custom_props:
+    description: Represents any entity that has a model.
+---
+# MegModeledEntityTag
+
+<ObjectType
+    name="MegModeledEntityTag"
+    prefix="megmodeledentity@"
+    identityFormat={
+        <>
+            Identified using the format <code>{"megmodeledentity@<entity>"}</code>.
+        </>
+    }
+    description={
+        <>
+            Represents any entity that has a model.
+            Can be created using the `megmodel` command.
+        </>
+    }
+/>
+
+## Tags
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegModeledEntityTag.entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={
+            <>
+                Returns the underlying entity of the modeled entity.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegModeledEntityTag.entity_visible`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megmodeledentitytagentity_visible">
+                <code>entity_visible</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the base entity of the modeled entity is visible.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegModeledEntityTag.model[(<model>)]`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegActiveModelTag</code>}
+        Description={
+            <>
+                Returns the active model with the specified name on the modeled entity.
+                If no name is specified, returns the first model on the modeled entity.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegModeledEntityTag.models`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag(MegActiveModelTag)</code>}
+        Description={
+            <>
+                Returns a map of all models on the modeled entity.
+                The keys are the names of the models, and the values are the active models.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegModeledEntityTag.should_save`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megmodeledentitytagshould_save">
+                <code>should_save</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the modeled entity should be saved on unload.
+            </>
+        }
+    />
+</MetaEntry>
+
+## Mechanisms
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.entity_visible`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Booelan)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the base entity of the modeled entity is visible.
+            </>
+        }
+        Tags={
+            <a href="#tag-megbonetagentity_visible">
+                <code>MegBoneTag.entity_visible</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.should_save`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the modeled entity should be saved on unload.
+            </>
+        }
+        Tags={
+            <a href="#tag-megbonetagshould_save">
+                <code>MegBoneTag.should_save</code>
+            </a>
+        }
+    />
+</MetaEntry>

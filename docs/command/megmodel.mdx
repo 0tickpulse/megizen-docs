@@ -1,0 +1,34 @@
+---
+sidebar_custom_props:
+    description: Applies/removes a model to/from an entity.
+---
+
+# `megmodel`
+
+```js
+megmodel [entity:<entity>] [model:<model>] (remove)
+```
+
+Applies/removes a model to/from an entity.
+If you have come over from Mythic, this is equivalent to the `model` mechanic.
+To configure other options such as hitbox/invisible/damagetint/etc, adjust the MegModeledEntityTag object instead.
+
+## Arguments
+
+| Argument | Input               | Required | Default | Description                                                          |
+| -------- | ------------------- | -------- | ------- | -------------------------------------------------------------------- |
+| entity   | EntityTag           | yes      |         | The entity to apply the model to.                                    |
+| model    | ElementTag          | yes      |         | The model to apply. Must be a name of a loaded model in ModelEngine. |
+| remove   | ElementTag(Boolean) | no       | `false` | Whether to remove the model instead of applying it.                  |
+
+## Examples
+
+```yml
+# Used to add a model to an entity when it spawns.
+on zombie spawns:
+- megmodel entity:<context.entity> model:my_model
+```
+
+## See Also
+
+- Object Type <a href="/megizen-docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a>

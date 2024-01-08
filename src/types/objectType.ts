@@ -3,6 +3,7 @@ import React from "react";
 
 export type ObjectType = {
     name: React.ReactNode;
+    src?: string;
     prefix?: React.ReactNode;
     baseType?: React.ReactNode;
     implementations?: React.ReactNode[];

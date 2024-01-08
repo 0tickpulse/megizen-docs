@@ -1,3 +1,7 @@
+---
+sidebar_custom_props:
+    description: Represents a bone on a model.
+---
 # MegBoneTag
 
 <ObjectType
@@ -56,6 +60,11 @@
     </EntryHeader>
     <DetailsTable
         Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagdefault_tint">
+                <code>damage_tint</code>
+            </a>
+        }
         Description={
             <>
                 Returns the default tint of the bone.
@@ -84,6 +93,11 @@
     </EntryHeader>
     <DetailsTable
         Returns={<code>ItemTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagitem">
+                <code>item</code>
+            </a>
+        }
         Description={
             <>
                 Returns the underlying item that the bone uses.
@@ -126,6 +140,53 @@
         Tags={
             <a href="#tag-megbonetagdamage_tint">
                 <code>MegBoneTag.damage_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.default_tint`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the default tint of the bone.
+            </>
+        }
+        Tags={
+            <a href="#tag-megbonetagdefault_tint">
+                <code>MegBoneTag.default_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.item`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ItemTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the underlying item that the bone uses.
+                Shouldn't be used unless you know what you're doing.
+            </>
+        }
+        Tags={
+            <a href="#tag-megbonetagitem">
+                <code>MegBoneTag.item</code>
             </a>
         }
     />

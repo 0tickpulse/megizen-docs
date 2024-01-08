@@ -52,10 +52,10 @@ const config: Config = {
         // Replace with your project's social card
         image: "img/docusaurus-social-card.jpg",
         navbar: {
-            title: "My Site",
+            title: "Megizen Docs",
             logo: {
-                alt: "My Site Logo",
-                src: "img/logo.svg",
+                alt: "Megizen Docs Logo",
+                src: "img/logo.png",
             },
             items: [
                 // {
@@ -91,10 +91,10 @@ const config: Config = {
                         //     label: "Stack Overflow",
                         //     href: "https://stackoverflow.com/questions/tagged/docusaurus",
                         // },
-                        // {
-                        //     label: "Discord",
-                        //     href: "https://discordapp.com/invite/docusaurus",
-                        // },
+                        {
+                            label: "Denizen Discord",
+                            href: "https://discord.gg/Q6pZGSR",
+                        },
                         // {
                         //     label: "Twitter",
                         //     href: "https://twitter.com/docusaurus",
@@ -104,22 +104,18 @@ const config: Config = {
                 {
                     title: "More",
                     items: [
-                        /* {
-                            label: "Blog",
-                            to: "/blog",
-                        },
                         {
                             label: "GitHub",
-                            href: "https://github.com/facebook/docusaurus",
-                        }, */
+                            href: "https://github.com/0tickpulse/megizen",
+                        },
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+            copyright: `Copyright © ${new Date().getFullYear()} 0TickPulse. Built with Docusaurus.`,
         },
         prism: {
-            theme: prismThemes.github,
-            darkTheme: prismThemes.dracula,
+            theme: prismThemes.vsLight,
+            darkTheme: prismThemes.vsDark,
         },
     } satisfies Preset.ThemeConfig,
 };

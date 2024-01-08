@@ -1,6 +1,5 @@
-import { EntryBox } from "@site/src/components/EntryBox";
-import { MetaEntry } from "@site/src/components/MetaEntry";
-import type { ObjectType } from "@site/src/types/objectType.js";
+import type { ObjectType } from "@site/src/types/objectType";
+import { urlObjectType } from "@site/src/utils/urls";
 
 export function ObjectType({ name, prefix, baseType, implementations, identityFormat, description }: ObjectType) {
     return (
@@ -38,6 +37,11 @@ export function ObjectType({ name, prefix, baseType, implementations, identityFo
                         <td>{description}</td>
                     </tr>
                 )}
+                <tr>
+                    <td colSpan={2}>
+                        <a href={urlObjectType(name)}>View source</a>
+                    </td>
+                </tr>
             </tbody>
         </>
     );
