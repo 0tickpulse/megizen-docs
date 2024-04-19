@@ -10,16 +10,21 @@ megmodel [entity:<modeled_entity>] [model:<model>] (remove)
 ```
 
 Applies/removes a model to/from an entity.
-If you have come over from Mythic, this is equivalent to the `model` mechanic.
-To configure other options such as hitbox/invisible/damagetint/etc, adjust the MegModeledEntityTag object instead.
+
+If specifying a player as the entity: should the player disconnect, the model will not persist and the player will sometimes become invisible. Use the <a href="/megizen-docs/tags/#tag-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a> mechanism to make sure that the player, upon rejoining, is no longer invisible.
+
+Models do not persist across worlds. Before teleportation, they should be removed and then added back.
+
+If you have come over from Mythic, this is equivalent to the <a href="https://git.lumine.io/mythiccraft/modelengine/-/wikis/Mechanics:-Model"> `model`</a> mechanic.
+To configure other options such as hitbox/invisible/damagetint/etc, adjust the <a href="/megizen-docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a> object instead.
 
 ## Arguments
 
-| Argument | Input               | Required | Default | Description                                                          |
-| -------- | ------------------- | -------- | ------- | -------------------------------------------------------------------- |
-| entity   | MegModeledEntityTag | yes      |         | The entity to apply the model to.                                    |
-| model    | ElementTag          | yes      |         | The model to apply. Must be a name of a loaded model in ModelEngine. |
-| remove   | ElementTag(Boolean) | no       | `false` | Whether to remove the model instead of applying it.                  |
+| Argument | Input               | Required | Default | Description                                                                                      |
+| -------- | ------------------- | -------- | ------- | ------------------------------------------------------------------------------------------------ |
+| entity   | MegModeledEntityTag | yes      |         | The entity to apply the model to.                                                                |
+| model    | ElementTag          | yes      |         | The model to apply. Must be a name of a loaded model in ModelEngine.                             |
+| remove   | N/A                 | no       |         | Whether to remove the model instead of applying it. This is an optional argument.                |
 
 ## Examples
 
@@ -28,7 +33,13 @@ To configure other options such as hitbox/invisible/damagetint/etc, adjust the M
 on zombie spawns:
 - megmodel entity:<context.entity> model:my_model
 ```
+```yml
+# Removes the model from the specified entity.
+- megmodel entity:<context.entity> model:my_model remove
+```
 
 ## See Also
 
-- Object Type <a href="/megizen-docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a>
+- Object Type: <a href="/megizen-docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a>
+- Tag: <a href="/megizen-docs/tags/#tag-playertagmeg_forced_invisible"> `PlayerTag.meg_forced_invisible`</a>
+- Mechanism: <a href="/megizen-docs/tags/#tag-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a>

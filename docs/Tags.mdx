@@ -1,6 +1,7 @@
 ---
+sidebar_position: 2
 sidebar_custom_props:
-    description: Additional tags introduced in Megizen
+    description: Additional tags introduced in Megizen.
 ---
 
 # Tags
@@ -14,6 +15,17 @@ sidebar_custom_props:
         Description={
             <>
                 Returns the modeled entity of the entity, if any.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.meg_forced_invisible`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player has been forcefully turned invisible by either the megmodel command or by ModelEngine.
             </>
         }
     />
