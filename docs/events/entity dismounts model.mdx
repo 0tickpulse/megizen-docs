@@ -6,9 +6,10 @@ sidebar_custom_props:
 ```js
 meg <entity> dismounts <'model'>
 ```
-This event is fired when a player interacts with a ModelEngine model.
 
-- [x] Cancellable: This adds `<context.cancelled>` and `- determine 'cancelled'` or `'cancelled:false'`.
+<Event cancellable />
+
+This event is fired when a player interacts with a ModelEngine model.
 
 ## Contexts
 
@@ -18,6 +19,6 @@ This event is fired when a player interacts with a ModelEngine model.
 | `<context.entity>`     | returns the EntityTag of the entity that is dismounting the model.              |
 | `<context.was_driver>` | returns a ElementTag(Boolean) of whether the dismounting entity was the driver. |
 
-{/* 
+{/*
 TODO: Add examples
 */}

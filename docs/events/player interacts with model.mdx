@@ -7,6 +7,8 @@ sidebar_custom_props:
 meg player interacts with <'model'>
 ```
 
+<Event cancellable hasLocation hasPlayer />
+
 This event is fired when a player interacts with a ModelEngine model.
 
 ## Switches
@@ -14,10 +16,6 @@ This event is fired when a player interacts with a ModelEngine model.
 | Switch            | Description                                                 |
 | ----------------- | ----------------------------------------------------------- |
 | `action:<action>` | Only processes the event if a specific action is performed. |
-
-- [x] Cancellable: This adds `<context.cancelled>` and `- determine 'cancelled'` or `'cancelled:false'`.
-- [x] Location: True.
-- [x] Player: Always.
 
 :::warning
 
