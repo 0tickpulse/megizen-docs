@@ -1,0 +1,52 @@
+---
+sidebar_custom_props:
+    description: Mounts/dismounts an entity to/from a model.
+---
+
+# `megmount`
+
+```js
+megmount [entity:<entity>] [model:<active_model>] [bone:<bone>] (driver) (passenger) (dismount) (interactable) (damageable)
+```
+
+Mounts the given entity on the given modeled entity, either as a passenger or the driver.
+
+The "bone_name" argument is required if the entity is being mounted as a passenger. It specifies which bone the entity will be mounted on.
+You can find out mountable bone names by opening the model in Blockbench. More info on this can be found here: https://git.lumine.io/mythiccraft/model-engine-4/-/wikis/Modeling/Bone-Behaviors#mount
+
+The "dismount" argument is optional, but will dismount the entity if specified.
+The "interactable" and "damageable" arguments are optional, but make the mount interactable and damageable, respectively.
+
+## Arguments
+| Argument     | Input             | Required                         | Default | Description                                                                                                      |
+| ------------ | ----------------- | -------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| entity       | EntityTag         | yes                              |         | The entity that will be mounted on the model.                                                                    |
+| model        | MegActiveModelTag | yes                              |         | The model to mount the entity to.                                                                                |
+| bone         | ElementTag        | yes if entity is not a driver    |         | Specifies which bone the entity will be mounted on. Required only if the entity is being mounted as a passenger. |
+| driver       | N/A               | yes if entity is not a passenger |         | Whether to mount this entity as a driver. Required only if the entity being mounted is not a passenger.          |
+| passenger    | N/A               | yes if entity is not a driver    |         | Whether to mount this entity as a passenger. Required only if the entity being mounted is not a passenger.       |
+| dismount     | N/A               | no                               |         | Whether to dismount the current mounted entity. This is an optional argument.                                    |
+| interactable | N/A               | no                               | false   | Whether this modeled entity is interactable.                                                                     |
+| damageable   | N/A               | no                               | false   | Whether this modeled entity is damageable.                                                                       |
+
+
+
+
+
+## Examples
+
+```yml
+# Used to add a model to an entity when it spawns.
+on meg player interacts with my_vehicle_model:
+- megmount entity:<player> model:<context.active_model> driver interactable
+```
+```yml
+# Removes the model from the specified entity.
+- megmodel entity:<context.entity> model:my_model remove
+```
+
+## See Also
+
+- Object Type: <a href="/megizen-docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a>
+- Tag: <a href="/megizen-docs/tags/#tag-playertagmeg_forced_invisible"> `PlayerTag.meg_forced_invisible`</a>
+- Mechanism: <a href="/megizen-docs/tags/#tag-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a>

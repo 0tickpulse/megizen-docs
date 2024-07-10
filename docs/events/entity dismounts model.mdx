@@ -1,0 +1,23 @@
+---
+sidebar_custom_props:
+    description: When an entity is dismounting a model.
+---
+#
+```js
+meg <entity> dismounts <'model'>
+```
+This event is fired when a player interacts with a ModelEngine model.
+
+- [x] Cancellable: This adds `<context.cancelled>` and `- determine 'cancelled'` or `'cancelled:false'`.
+
+## Contexts
+
+| Context                | Description                                                                     |
+| ---------------------- | ------------------------------------------------------------------------------- |
+| `<context.model>`      | returns the MegActiveModelTag of the model that the entity is dismounting.      |
+| `<context.entity>`     | returns the EntityTag of the entity that is dismounting the model.              |
+| `<context.was_driver>` | returns a ElementTag(Boolean) of whether the dismounting entity was the driver. |
+
+{/* 
+TODO: Add examples
+ */}
