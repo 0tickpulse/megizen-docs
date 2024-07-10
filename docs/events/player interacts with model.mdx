@@ -40,13 +40,13 @@ This event may in some cases double-fire, requiring usage of the [ratelimit](htt
 ```yml
 # Play the 'happy' animation whenever a player pets a capybara :)
 on meg player interacts with capybara:
-  - ratelimit <player> 1t
-  - megstate model:<player.target> state:happy
+- ratelimit <player> 1t
+- megstate model:<player.target> state:happy
 ```
 
 ```yml
 # Get angry if a player attacks a capybara.
 on meg player interacts with capybara action:ATTACK:
-  - ratelimit <player> 1t
-  - narrate "Hey!! Don't hurt the capybara! :("
+- ratelimit <player> 1t
+- narrate "Hey!! Don't hurt the capybara! :("
 ```
