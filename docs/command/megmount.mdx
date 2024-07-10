@@ -18,6 +18,7 @@ The "dismount" argument is optional, but will dismount the entity if specified.
 The "interactable" and "damageable" arguments are optional, but make the mount interactable and damageable, respectively.
 
 ## Arguments
+
 | Argument     | Input             | Required                         | Default | Description                                                                                                      |
 | ------------ | ----------------- | -------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | entity       | EntityTag         | yes                              |         | The entity that will be mounted on the model.                                                                    |
@@ -29,10 +30,6 @@ The "interactable" and "damageable" arguments are optional, but make the mount i
 | interactable | N/A               | no                               | false   | Whether this modeled entity is interactable.                                                                     |
 | damageable   | N/A               | no                               | false   | Whether this modeled entity is damageable.                                                                       |
 
-
-
-
-
 ## Examples
 
 ```yml
@@ -40,6 +37,7 @@ The "interactable" and "damageable" arguments are optional, but make the mount i
 on meg player interacts with my_vehicle_model:
 - megmount entity:<player> model:<context.active_model> driver interactable
 ```
+
 ```yml
 # Removes the model from the specified entity.
 - megmodel entity:<context.entity> model:my_model remove
