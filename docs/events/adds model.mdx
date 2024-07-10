@@ -1,0 +1,22 @@
+---
+sidebar_custom_props:
+    description: When a model is about to be removed from a MegModeledEntityTag.
+---
+#
+```js
+meg adds <'model'>
+```
+This event is fired when a model is about to be added to a MegModeledEntityTag.
+
+- [x] Cancellable: This adds `<context.cancelled>` and `- determine 'cancelled'` or `'cancelled:false'`.
+
+## Contexts
+
+| Context                    | Description                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| `<context.active_model>`   | returns the MegActiveModelTag of the model that is about to be added.                 |
+| `<context.modeled_entity>` | returns the MegModeledEntityTag of the entity that the model is about to be added to. |
+
+{/* 
+TODO: Add examples
+ */}

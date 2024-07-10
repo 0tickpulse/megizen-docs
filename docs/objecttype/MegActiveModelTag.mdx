@@ -51,6 +51,44 @@ sidebar_custom_props:
 
 <MetaEntry>
     <EntryHeader>
+    ### Tag: `MegActiveModelTag.can_drive`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagcan_drive">
+                <code>can_drive</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the active model can be driven.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.can_ride`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagcan_ride">
+                <code>can_ride</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the active model can be ridden.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
     ### Tag: `MegActiveModelTag.damage_tint`
     </EntryHeader>
     <DetailsTable
@@ -82,6 +120,62 @@ sidebar_custom_props:
         Description={
             <>
                 Returns the default tint of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.driver`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={
+            <>
+                Returns a EntityTag of the driver of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.driver_bone`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegBoneTag</code>}
+        Description={
+            <>
+                Returns a MegBoneTag of the driver bone of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.has_passengers`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the active model has passengers.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.has_riders`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns a ElementTag(Boolean) of whether the active model has riders.
             </>
         }
     />
@@ -179,6 +273,34 @@ sidebar_custom_props:
 
 <MetaEntry>
     <EntryHeader>
+    ### Tag: `MegActiveModelTag.name`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag</code>}
+        Description={
+            <>
+                Returns the name of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.passengers`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ListTag(EntityTag)</code>}
+        Description={
+            <>
+                Returns a ListTag(EntityTag) of the passengers currently on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
     ### Tag: `MegActiveModelTag.scale`
     </EntryHeader>
     <DetailsTable
@@ -196,7 +318,83 @@ sidebar_custom_props:
     />
 </MetaEntry>
 
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.seats`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ListTag(ElementTag)</code>}
+        Description={
+            <>
+                Returns a ListTag of seats on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.seats`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag</code>}
+        Description={
+            <>
+                Returns a MapTag of entities on the active model, if any.
+                Keys will be the bones entities are mounted on, while the values of those keys will be the entities themselves.
+                Only returns the bones of entities who are mounted on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
 ## Mechanisms
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.can_drive`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the active model can be driven.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagcan_drive">
+                <code>MegActiveModelTag.can_drive</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.can_ride`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the active model can be ridden.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagcan_ride">
+                <code>MegActiveModelTag.can_ride</code>
+            </a>
+        }
+    />
+</MetaEntry>
 
 <MetaEntry>
     <EntryHeader>
@@ -217,6 +415,32 @@ sidebar_custom_props:
             <a href="#tag-megactivemodeltagdamage_tint">
                 <code>MegActiveModelTag.damage_tint</code>
             </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.dismount_all`
+    </EntryHeader>
+    <DetailsTable
+        Description={
+            <>
+                Dismounts everyone mounted on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.dismount_driver`
+    </EntryHeader>
+    <DetailsTable
+        Description={
+            <>
+                Dismounts the driver of the active model.
+            </>
         }
     />
 </MetaEntry>
