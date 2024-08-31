@@ -97,6 +97,10 @@ const config: Config = {
                             label: "Denizen Discord",
                             href: "https://discord.gg/Q6pZGSR",
                         },
+                        {
+                            label: "Megizen Discord",
+                            href: "https://discord.gg/SHthmb6t6n",
+                        },
                         // {
                         //     label: "Twitter",
                         //     href: "https://twitter.com/docusaurus",
