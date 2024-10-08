@@ -34,7 +34,7 @@
     --docsearch-hit-color: var(--ifm-font-color-base) !important;
 }
 
-.DocSearch-Hit[aria-selected=true] a {
+[data-theme="dark"] .DocSearch-Hit[aria-selected=true] a {
     background-color: var(--ifm-menu-color-background-active) !important;
 }
 
