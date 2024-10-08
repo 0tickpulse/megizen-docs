@@ -123,6 +123,11 @@ const config: Config = {
             theme: prismThemes.vsLight,
             darkTheme: prismThemes.vsDark,
         },
+        algolia: {
+            appId: "Y6LLML2D2D",
+            apiKey: "6de6873b6147da5d20708080a54b4d87",
+            indexName: "0tickpulseio",
+        }
     } satisfies Preset.ThemeConfig,
 };
 
