@@ -248,7 +248,7 @@ sidebar_custom_props:
             <>
                 Returns a DurationTag of the delay before the body auto rotates to match the head's rotation.
 
-                See also: <a href="#tag-megmodeledentitytagrotation_duration"><code>MegModeledEntity.rotation_duration</code></a>
+                See also <a href="#tag-megmodeledentitytagrotation_duration"><code>MegModeledEntity.rotation_duration</code></a>
             </>
         }
     />
@@ -269,7 +269,7 @@ sidebar_custom_props:
             <>
                 Returns a DurationTag the body takes to auto rotate back to the head's rotation.
 
-                See also: <a href="#tag-megmodeledentitytagrotation_delay"><code>MegModeledEntity.rotation_delay</code></a>
+                See also <a href="#tag-megmodeledentitytagrotation_delay"><code>MegModeledEntity.rotation_delay</code></a>
             </>
         }
     />
@@ -313,6 +313,28 @@ sidebar_custom_props:
     />
 </MetaEntry>
 
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegModeledEntityTag.visible_to`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ListTag(PlayerTag)</code>}
+        Mechanism={
+            <a href="#mech-megmodeledentitytagvisible_to">
+                <code>visible_to</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns a list of players that can see the modeled entity.
+
+                See also <a href="#mech-megmodeledentitytaghide_from"><code>hide_from</code></a>
+                See also <a href="#mech-megmodeledentitytagshow_to"><code>show_to</code></a>
+            </>
+        }
+    />
+</MetaEntry>
+
 ## Mechanisms
 
 <MetaEntry>
@@ -340,6 +362,250 @@ sidebar_custom_props:
 
 <MetaEntry>
     <EntryHeader>
+    ### Mech: `MegModeledEntityTag.head_clamp_uneven`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Booelan)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the head clamp is uneven on the modeled entity.
+                Head clamp is used to clamp the head when the entity is moving.
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytaghead_clamp_uneven">
+                <code>MegModeledEntity.head_clamp_uneven</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.hide_from`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ListTag(PlayerTag)</code>
+            </>
+        }
+        Description={
+            <>
+                Forces the modeled entity to be hidden from the input list of players.
+
+                See also <a href="#mech-megmodeledentitytagshow_to">
+                    <code>show_to</code>
+                </a>
+
+                See also <a href="#tag-megmodeledentitytagvisible_to">
+                    <code>visible_to</code>
+                </a>
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.max_body_angle`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the maximum body angle of the modeled entity.
+
+                If <a href="#tag-megmodeledentitytagbody_clamp_uneven"><code>body_clamp_uneven</code></a> is false, the minimum body angle will be set as the negative of this value.
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagmax_body_angle">
+                <code>MegModeledEntity.max_body_angle</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.max_head_angle`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the maximum head angle of the modeled entity.
+
+                If <a href="#tag-megmodeledentitytaghead_clamp_uneven"><code>head_clamp_uneven</code></a> is false, the minimum head angle will be set as the negative of this value.
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagmax_head_angle">
+                <code>MegModeledEntity.max_head_angle</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.min_body_angle`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the minimum body angle of the modeled entity.
+
+                Will have no effect if <a href="#tag-megmodeledentitytagbody_clamp_uneven"><code>body_clamp_uneven</code></a> is false.
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagmin_body_angle">
+                <code>MegModeledEntity.min_body_angle</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.min_head_angle`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the minimum head angle of the modeled entity.
+
+                Will have no effect if <a href="#tag-megmodeledentitytaghead_clamp_uneven"><code>head_clamp_uneven</code></a> is false.
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagmin_head_angle">
+                <code>MegModeledEntity.min_head_angle</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.rotation_delay`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>DurationTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the delay before the body auto rotates to match the head's rotation.
+
+                See also <a href="#tag-megmodeledentitytagrotation_delay"><code>rotation_delay</code></a>
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagrotation_delay">
+                <code>MegModeledEntity.rotation_delay</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.rotation_duration`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>DurationTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the time it takes for the body to auto rotate to match the head's rotation.
+
+                See also <a href="#tag-megmodeledentitytagrotation_delay"><code>rotation_delay</code></a>
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagrotation_duration">
+                <code>MegModeledEntity.rotation_duration</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.player_mode`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the body will rotate like a player (i.e. will not try to match the head angle).
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagplayer_mode">
+                <code>MegModeledEntity.player_mode</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.show_to`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>PlayerTag</code>
+            </>
+        }
+        Description={
+            <>
+                Forces the modeled entity to be unhidden from the input player.
+
+                See also <a href="#mech-megmodeledentitytaghide_from"><code>hide_from</code></a>
+                See also <a href="#tag-megmodeledentitytagvisible_to"><code>visible_to</code></a>
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
     ### Mech: `MegModeledEntityTag.should_save`
     </EntryHeader>
     <DetailsTable
@@ -356,6 +622,31 @@ sidebar_custom_props:
         Tags={
             <a href="#tag-megmodeledentitytagshould_save">
                 <code>MegModeledEntity.should_save</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegModeledEntityTag.stable_angle`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the stable angle before correcting back to the clamped angle.
+                For example, if the clamp is 50, and the stable angle is 15, the body can be 65 degrees away from the head before snapping back to 50 degrees away.
+                This causes the "sudden jerk" effect on all entity body rotation.
+            </>
+        }
+        Tags={
+            <a href="#tag-megmodeledentitytagstable_angle">
+                <code>MegModeledEntity.stable_angle</code>
             </a>
         }
     />
