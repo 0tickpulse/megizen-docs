@@ -59,6 +59,21 @@ sidebar_custom_props:
 
 <MetaEntry>
     <EntryHeader>
+    ### Tag: `MegBoneTag.glow_color`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagglow_color">
+                <code>glow_color</code>
+            </a>
+        }
+        Description={<>Returns the glow color of the bone.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
     ### Tag: `MegBoneTag.id`
     </EntryHeader>
     <DetailsTable Returns={<code>ElementTag</code>} Description={<>Returns the id of the bone.</>} />
@@ -81,9 +96,38 @@ sidebar_custom_props:
 
 <MetaEntry>
     <EntryHeader>
+    ### Tag: `MegBoneTag.is_glowing`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megbonetagis_glowing">
+                <code>is_glowing</code>
+            </a>
+        }
+        Description={<>Returns whether the bone is glowing.</>}
+    />
+</MetaEntry>
+<MetaEntry>
+    <EntryHeader>
     ### Tag: `MegBoneTag.location`
     </EntryHeader>
     <DetailsTable Returns={<code>LocationTag</code>} Description={<>Returns the location of the bone.</>} />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.scale`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Number)</code>}
+        Mechanism={
+            <a href="#mech-megbonetagscale">
+                <code>scale</code>
+            </a>
+        }
+        Description={<>Returns the scale of the bone.</>}
+    />
 </MetaEntry>
 
 <MetaEntry>
@@ -148,6 +192,25 @@ sidebar_custom_props:
 
 <MetaEntry>
     <EntryHeader>
+    ### Mech: `MegBoneTag.glow_color`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={<>Sets the glow color of the bone.</>}
+        Tags={
+            <a href="#tag-megbonetagglow_color">
+                <code>MegBoneTag.glow_color</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
     ### Mech: `MegBoneTag.item`
     </EntryHeader>
     <DetailsTable
@@ -160,6 +223,44 @@ sidebar_custom_props:
         Tags={
             <a href="#tag-megbonetagitem">
                 <code>MegBoneTag.item</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.is_glowing`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={<>Sets whether the bone is glowing..</>}
+        Tags={
+            <a href="#tag-megbonetagis_glowing">
+                <code>MegBoneTag.is_glowing</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.scale`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={<>Sets the scale of the bone.</>}
+        Tags={
+            <a href="#tag-megbonetagscale">
+                <code>MegBoneTag.scale</code>
             </a>
         }
     />
