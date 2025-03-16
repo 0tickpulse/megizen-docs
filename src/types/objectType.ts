@@ -9,4 +9,5 @@ export type ObjectType = {
     implementations?: React.ReactNode[];
     identityFormat?: React.ReactNode;
     description?: React.ReactNode;
+    seeAlso: React.ReactNode[];
 };
