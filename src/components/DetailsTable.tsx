@@ -7,13 +7,7 @@ export function DetailsTable(details: Record<React.ReactNode, React.ReactNode>) 
             <tbody>
                 {Object.entries(details).map(([key, value]) => (
                     <tr key={key} className={styles.entryRow}>
-                        <td
-                            style={{
-                                verticalAlign: "top",
-                            }}
-                        >
-                            {key.replace(/\_/g, " ")}
-                        </td>
+                        <td className={styles.entryKey}>{key.replace(/\_/g, " ")}</td>
                         <td>{value}</td>
                     </tr>
                 ))}
