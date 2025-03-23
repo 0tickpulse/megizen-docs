@@ -1,7 +1,7 @@
 import type { ObjectType } from "@site/src/types/objectType";
 import { urlObjectType } from "@site/src/utils/urls";
 
-export function ObjectType({ name, prefix, baseType, implementations, identityFormat, description }: ObjectType) {
+export function ObjectType({ name, prefix, baseType, implementations, identityFormat, description, seeAlso }: ObjectType) {
     return (
         <>
             <tbody>
@@ -35,6 +35,14 @@ export function ObjectType({ name, prefix, baseType, implementations, identityFo
                     <tr>
                         <td>Description:</td>
                         <td>{description}</td>
+                    </tr>
+                )}
+                {seeAlso && (
+                    <tr>
+                        <td>See also:</td>
+                        {seeAlso.map((seeAlso, index) => (
+                            <td key={index}>{seeAlso}</td>
+                        ))}
                     </tr>
                 )}
                 <tr>
