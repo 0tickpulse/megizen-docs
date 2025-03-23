@@ -1,0 +1,32 @@
+---
+sidebar_custom_props:
+    description: Causes the model look at a location.
+---
+
+# `meglook`
+
+```js
+meglook [entity:<entity>] [<location>/pitch:<pitch>/head_yaw:<yaw>/body_yaw:<yaw>]
+```
+
+Makes the model look towards the location.
+Similar to the [Denizen look command](https://meta.denizenscript.com/Docs/Commands/look).
+
+## Arguments
+
+| Argument     | Input             | Required                         | Default | Description                                                                                                      |
+| ------------ | ----------------- | -------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| entity       | EntityTag         | yes                              |         | The entity that should look.                                                                                     |
+
+The following arguments are mutually exclusive; select one of them:
+
+| Argument     | Input             | Required                         | Default | Description                                                                                                      |
+| ------------ | ----------------- | -------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| location     | LocationTag       | yes (if not using pitch/yaw)     |         | The location to look at.                                                                                         |
+| pitch        | ElementTag        | yes (if not using location)      |         | The pitch to look with.                                                                                          |
+| head_yaw     | ElementTag        | yes (if not using location)      |         | The head yaw to look with.                                                                                       |
+| body_yaw     | ElementTag        | yes (if not using location)      |         | The body yaw to look with.                                                                                       |
+
+## See Also
+
+- Command: [`look`](https://meta.denizenscript.com/Docs/Commands/look)
