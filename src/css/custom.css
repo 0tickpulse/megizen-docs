@@ -75,9 +75,3 @@ td {
     font-weight: normal;
     font-style: normal;
 }
-
-.megizenTitle {
-    font-family: "CA Gingermint", sans-serif;
-    color: var(--ifm-color-primary);
-    text-align: center;
-}
